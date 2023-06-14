@@ -1,0 +1,116 @@
+USE [OnlineAuctionDatabase]
+GO
+
+/****** Object:  Table [dbo].[ItemImagetbl]    Script Date: 04/12/2019 01:18:52 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[ItemImagetbl](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[ImageId] [nvarchar](50) NULL,
+	[ImageName] [nvarchar](50) NULL,
+	[Extention] [nvarchar](50) NULL
+) ON [PRIMARY]
+
+GO
+
+USE [OnlineAuctionDatabase]
+GO
+
+/****** Object:  Table [dbo].[ItemTable]    Script Date: 04/12/2019 01:19:00 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[ItemTable](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[ItemId] [nvarchar](50) NULL,
+	[Itemname] [nvarchar](50) NULL,
+	[Itemmanufactor] [nvarchar](50) NULL,
+	[Itemprice] [nvarchar](50) NULL,
+	[Itemdate] [nvarchar](50) NULL,
+	[Itemcategory] [nvarchar](50) NULL,
+	[Username] [nvarchar](50) NULL,
+	[UserID] [nvarchar](50) NULL
+) ON [PRIMARY]
+
+GO
+
+USE [OnlineAuctionDatabase]
+GO
+
+/****** Object:  Table [dbo].[RegistrationTable]    Script Date: 04/12/2019 01:19:05 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[RegistrationTable](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[Username] [nvarchar](10) NULL,
+	[Firstname] [nvarchar](10) NULL,
+	[Lastname] [nvarchar](10) NULL,
+	[Email] [nvarchar](50) NULL,
+	[Gender] [nvarchar](10) NULL,
+	[Address] [nvarchar](max) NULL,
+	[Password] [nvarchar](20) NULL,
+	[ConfirmPassword] [nvarchar](20) NULL,
+	[Mobile] [nvarchar](10) NULL,
+	[Ulevel] [nvarchar](50) NULL
+) ON [PRIMARY]
+
+GO
+
+USE [OnlineAuctionDatabase]
+GO
+
+/****** Object:  Table [dbo].[BidTable]    Script Date: 04/12/2019 01:19:11 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[BidTable](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[BidID] [nvarchar](50) NULL,
+	[ItemID] [nvarchar](50) NULL,
+	[Itemname] [nvarchar](50) NULL,
+	[Itemmanufactor] [nvarchar](50) NULL,
+	[Itemprice] [nvarchar](50) NULL,
+	[Itemcategory] [nvarchar](50) NULL,
+	[BiddingPrice] [nvarchar](50) NULL,
+	[UserID] [nvarchar](50) NULL,
+	[Username] [nvarchar](50) NULL,
+	[Action] [nvarchar](50) NULL
+) ON [PRIMARY]
+
+GO
+USE [OnlineAuctionDatabase]
+GO
+
+/****** Object:  Table [dbo].[InboxTable]    Script Date: 04/12/2019 01:19:21 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[InboxTable](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[MailTo] [nvarchar](50) NULL,
+	[MailFrom] [nvarchar](50) NULL,
+	[MailSubject] [nvarchar](50) NULL,
+	[MailMessage] [nvarchar](max) NULL
+) ON [PRIMARY]
+
+GO
+
+
+
